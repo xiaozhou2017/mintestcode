@@ -33,7 +33,7 @@ public class DemoService  extends Comcalculate{
             res.add(current.toString());
             return;
         }
-        int num = digits.charAt(index) - '0';//get ASSCI num
+        int num = digits.charAt(index) - '0';//get ASCII num
         for (int i = 0; i < keyboard[num].length(); i++) {
             current.append(keyboard[num].charAt(i));
             dohelper(index + 1, digits, res, current, keyboard); //recursive algorithm
