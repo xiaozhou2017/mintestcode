@@ -57,7 +57,7 @@ public class ResponseObject {
     }
     public static ResponseObject error(){
 
-        ResponseObject object = new ResponseObject(ResponseCode_COMMON_ERROE,"默认出错信息");
+        ResponseObject object = new ResponseObject(ResponseCode_COMMON_ERROE,"error");
         return object;
 
     }

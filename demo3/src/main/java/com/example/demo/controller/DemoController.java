@@ -17,14 +17,9 @@ public class DemoController {
     private static Logger log = LoggerFactory.getLogger(DemoController.class);
 
 
-    /**
-     * 输入的手机键值字符串 0-9   如 2   2,3   8,9,6   10,99,12 形式
-     * @param digitstr
-     * @return
-     */
 
     /**
-     *
+     *input string like "2"  "2,3"   "8,9,6"  "10,99,12"
      * @param digitstr
      * @return ResponseObject
      */
@@ -33,12 +28,12 @@ public class DemoController {
     public ResponseObject getletterbynum(String digitstr){ //没有封装Bean,对数组传值不友好，暂时采用string 规则传值
         List<String> ls;
         try {
-            log.info("===传入参数========={}",digitstr);
+            log.info("===input========={}",digitstr);
             ls=demoService.doexcute(digitstr);
-            log.info("===传出结果========={}",ls);
+            log.info("===output========={}",ls);
             return ResponseObject.success(ls);
         }catch (Exception e){
-            log.info("系统错误~~~~~~~~~~~~~");
+            log.info("system error ~~~~~~~~~~~~~");
             return ResponseObject.error(ResponseObject.ResponseCode_COMMON_ERROE,e.getMessage());
         }
     }
